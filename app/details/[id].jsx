@@ -37,7 +37,7 @@ const JobDetails = () => {
         <ScrollView showsVerticalScrollIndicator={false}
           refreshControl={
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
-        ><Text className="mt-5 px-4 py-6 font-psemibold text-2xl text-white bg-primary-purple">İlan Detayı</Text>
+        ><Text className="mt-5 px-4 pb-4 pt-5  font-psemibold text-2xl text-white bg-primary-purple">İlan Detayı</Text>
           {isLoading ? (
             <ActivityIndicator size='large' />
           ) : error ? (

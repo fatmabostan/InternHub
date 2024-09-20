@@ -3,20 +3,19 @@ import { useLocalSearchParams } from "expo-router";
 import { View, Text, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import JSearchApi from "../../lib/JSearchApi";
-import { searchPosts } from "../../lib/appwrite";
-import { EmptyState, SearchInput, VideoCard } from "../../components";
+import { EmptyState, SearchInput } from "../../components";
 import JobInfoCard from "@/components/cards/JobInfoCard";
 
 const Search = () => {
   const { query } = useLocalSearchParams();
-  const { data: posts, refetch } = JSearchApi(() => searchPosts(query));
+  const { data: posts, refetch } = JSearchApi(query);
 
   useEffect(() => {
     refetch();
   }, [query]);
 
   return (
-    <SafeAreaView className="bg-primary-background h-full">
+    <SafeAreaView className="bg-primary-background h-full px-2">
       <FlatList
         data={posts}
         keyExtractor={(item) => item.$id}
@@ -27,7 +26,7 @@ const Search = () => {
         )}
         ListHeaderComponent={() => (
           <>
-            <View className="flex my-6 px-4">
+            <View className="flex mt-8 px-4">
               <Text className="font-pmedium text-black text-lg">
                 Arama Sonuçları
               </Text>
@@ -35,7 +34,7 @@ const Search = () => {
                 {query}
               </Text>
 
-              <View className="mt-6 mb-8">
+              <View className="mt-6 mb-5">
                 <SearchInput initialQuery={query} refetch={refetch} />
               </View>
             </View>

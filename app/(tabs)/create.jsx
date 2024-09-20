@@ -95,8 +95,9 @@ const Create = () => {
 
   return (
     <SafeAreaView className="bg-primary-background h-full">
+      <Text className="px-4 py-3 font-psemibold text-2xl text-white bg-primary-purple">İlan Oluştur</Text>
       <ScrollView>  
-      <Text className="px-4 py-4 font-psemibold text-2xl text-white bg-primary-purple">İlan Oluştur</Text>
+      
       <View className="mx-4 mb-7">
         <FormField
           title="İlan Başlığı"

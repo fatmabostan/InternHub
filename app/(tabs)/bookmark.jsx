@@ -24,7 +24,7 @@ const Bookmark = () => {
  
   return (
     <View className="bg-primary-background h-full mt-0">
-      <Text className="mt-6 px-4 py-5 font-psemibold text-2xl text-white bg-primary-purple">Kaydedilen İlanlar</Text>
+      <Text className="mt-6 px-4 py-4 font-psemibold text-2xl text-white bg-primary-purple">Kaydedilen İlanlar</Text>
       <View className=" flex flex-col my-5 space-y-4">
       <View className="items-center">
       {isLoading ? (
